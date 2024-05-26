@@ -7,6 +7,7 @@ export default defineNitroPlugin(() => {
 
   const client = createClient({
     dsn: dsn.full,
+    secretKey: dsn.secretKey,
     tlsSecurity: dsn.tlsSecurity,
     tlsCA: dsn.tlsCA,
   })

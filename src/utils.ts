@@ -54,6 +54,7 @@ export async function getEdgeDbConfiguration(
     NUXT_EDGEDB_USER: user,
     NUXT_EDGEDB_PASS: pass,
     NUXT_EDGEDB_DATABASE: database,
+    NUXT_EDGEDB_SECRET_KEY: secretKey,
     NUXT_EDGEDB_TLS_CA: tlsCA,
     NUXT_EDGEDB_TLS_SECURITY: tlsSecurity,
 
@@ -76,6 +77,7 @@ export async function getEdgeDbConfiguration(
     user,
     pass,
     database,
+    secretKey,
     tlsCA,
     tlsSecurity: tlsSecurity as 'insecure' | 'no_host_verification' | 'strict' | 'default' | undefined,
     full: `edgedb://${user}:${pass}@${host}:${port}/${database}`,
